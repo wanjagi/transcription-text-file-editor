@@ -10,3 +10,7 @@ Removes the utterances:
 
 Speaker names and,
 timestamps.
+
+Working on adding more functionalities for editing transcription files.
+
+author: Francis Wanjagi Gatonye.
