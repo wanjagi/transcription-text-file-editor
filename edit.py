@@ -19,6 +19,17 @@ def delete_strings(text):
     text = re.sub("Speaker 1", "", text)
     text = re.sub("Speaker 2", "", text)
     text = re.sub("    \d\d:\d\d:\d\d    ", "", text)
+    text = re.sub(" ", text)
+    words = text.split()
+    new_words = []
+    prev_word = None
+    for word in words:
+        if word != prev_word:
+            new_words.append(word)
+            prev_word = word
+            
+    new_words = [word for word in new_words if not word.startswith("-")]
+    text = new_words
     return text
 
 with open(root.filename, "r") as f:
